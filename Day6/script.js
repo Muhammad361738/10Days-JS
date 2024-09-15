@@ -32,7 +32,7 @@ const details = document.querySelector(".hide")
 const btn = document.querySelector(".show")
 
 btn.addEventListener("click", ()=>{
-    details.textContent
+    const myName = details.getAttribute.
     console.log(details)
    console.log("clicked");
 })
