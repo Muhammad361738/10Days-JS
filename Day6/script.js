@@ -32,7 +32,7 @@ const details = document.querySelector(".hide")
 const btn = document.querySelector(".show")
 
 btn.addEventListener("click", ()=>{
-    const myName = details.getAttribute.
+    details.style.display = "block"
     console.log(details)
    console.log("clicked");
 })
