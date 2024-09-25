@@ -22,6 +22,8 @@ const requestUrl = "https://api.github.com/users/Muhammad361738";
 
 const xhr = new XMLHttpRequest();
 xhr.open('GET', requestUrl);
+let followers;
+let log;
 
 // Set up the event handler for readystatechange
 xhr.onreadystatechange = function () {
@@ -31,21 +33,27 @@ xhr.onreadystatechange = function () {
      
             // Parse the response data
             const data = JSON.parse(this.responseText);
-
+       
             // Log the data
-            console.log(typeof data);
-            console.log("Followers: ", data.followers);
-            console.log("Login: ", data.login);
-            console.log("Following: ", data.following);
+            // console.log(typeof data);
+            // document.write("Followers: ", data.followers);
+            // document.write("Login: ", data.login);
+            // document.write("Following: ", data.following);
 
             // Add image to the page
              //"https://avatars.githubusercontent.com/u/160308178?v=4";
                 
-            const img = document.createElement('img');  
-            img.src =  data.avatar_url;  
-            document.body.appendChild(img);
-        
-    
+            const pic = document.createElement('img');  
+            pic.src =  data.avatar_url;  
+            
+            document.body.appendChild(pic);
+        pic.style.borderRadius="50%"
+        const Ele=document.createElement('div')
+    followers= data.followers
+    log=data.login
+const myDoc=document.body.appendChild(Ele)
+myDoc.innerHTML=`folllowers ${followers}`
+
 };
 }
 xhr.send();

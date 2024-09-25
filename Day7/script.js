@@ -1,19 +1,23 @@
 
-function myDiv (classs,mycol) {
+function myDiv (claName,mycolor,myBgc,myContant) {
 let newEle= document.createElement("div");
 
-classs = newEle.className 
- 
+newEle.className = `${claName}`
 
- mycol =newEle.style.color;
-// mycol=this.col
-newEle.style.backgroundColor= "blue"
+ newEle.style.color = `${mycolor}`;
+newEle.style.backgroundColor= `${myBgc}`
 
-newEle.innerHTML= "my first div with java script"
+newEle.innerHTML= `${myContant}`
 
 document.body.appendChild(newEle)
 
+newEle.style.padding="10px"
+newEle.style.borderRadius="30px"
+newEle.style.margin="10px"
+newEle.style.display= "inline"
+
 }
 
-myDiv("main","red")
-// myDiv("karachi")
+myDiv("main","white","black","Talha&zain  Efforts in their codding journey")
+myDiv("karachi","orange","yellow","chai aur code ")
+
